@@ -42,7 +42,15 @@ composer require tronovav/geoip2-update
 - Enabled : Enable this feature
 - Default Country (Please use website scope) : We will switch to this current website (of Magento) if a such selected country is detected
 - Default store : It will redirect to a default store if a country defined above it is not matched.
--  
+### Command Line
+#### Download Maxmind Database
+```
+bin/magento betagento:geoip_detection:maxmind_download
+```
+### Testing 
+```
+bin/magento betagento:geoip_detection:test --ip 12.13.14.15
+```
 ## Code Standard
 
 PHPSTAN - Level 6
