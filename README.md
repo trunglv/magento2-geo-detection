@@ -1,4 +1,8 @@
-# magento2-ip-detection
+# Magento2 Extension - IP Detection
+
+## Overview
+Magento2 Online Store can use this extension to detect a country 
+
 
 ## Code Standard
 
