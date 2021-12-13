@@ -1,7 +1,7 @@
-# Magento2 Extension - IP Detection
+# Magento2 Extension - GEO Detection From Visitor IP
 
 ## Overview
-Magento2 Online Store can use this extension to detect a country 
+Magento2 Online Store can use this extension to detect a country from a visitor IP via other online services like MindMax or IpStack.
 
 
 ## Code Standard
