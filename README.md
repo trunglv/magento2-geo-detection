@@ -8,15 +8,17 @@ Magento2 Online Store can use this extension to detect a country from a visitor 
 ## How to use it:
 Go to Store >> Configuration >> Betagento >> IP Detection:
 
-![image](https://user-images.githubusercontent.com/820411/145786706-3ecd0ef3-7e1b-47cf-a965-f717775f2521.png)
+![image](https://user-images.githubusercontent.com/820411/145790027-e8285353-71ff-4580-8808-238fd444a43b.png)
 
-### Ip Detection section
+### GEO Detection Section
 - Enabled : Enable this extension
 - Api Service : Maxmind or IP Stack
 - Debug Enabled: Enable debug
+- 
+![image](https://user-images.githubusercontent.com/820411/145790155-5ebcebf4-11d6-4820-b5d8-8fdccedd6a60.png)
 
 ### Maxmind Configuration
-- Licence Key: Licence Key
+- Licence Key: Licence Key From https://www.maxmind.com/en/home
 - Technical Solution
 
 ## Code Standard
