@@ -7,6 +7,8 @@ Magento2 Online Store can use this extension to detect a country from a visitor 
 ```
 composer require betagento/magento2-geoip-detection:dev-main
 ```
+`This package is not installable via Composer 1.x, please make sure you upgrade to Composer 2+. Read more about our Composer 1.x deprecation policy.`
+
 ## How to use it:
 Go to Store >> Configuration >> Betagento >> IP Detection:
 ### GEO Detection Section
