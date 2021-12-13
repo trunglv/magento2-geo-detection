@@ -35,9 +35,10 @@ class Database {
     public function execute(){
         try{
             stream_wrapper_restore('phar');
-            $maxMindDatabaseDir = $this->getMediaAbsolutePath().'maxmind'. DIRECTORY_SEPARATOR . 'db';
-            if(!file_exists($this->getMediaAbsolutePath().'maxmind')){
-                mkdir($this->getMediaAbsolutePath().'maxmind');
+            $mediaAbsolutePath = $this->getMediaAbsolutePath();
+            $maxMindDatabaseDir = $mediaAbsolutePath .'maxmind' . DIRECTORY_SEPARATOR . 'db';
+            if(!file_exists($mediaAbsolutePath.'maxmind')){
+                mkdir($mediaAbsolutePath.'maxmind');
             }
             if(!file_exists($maxMindDatabaseDir))
                 mkdir($maxMindDatabaseDir);
