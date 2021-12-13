@@ -10,6 +10,14 @@ Go to Store >> Configuration >> Betagento >> IP Detection:
 
 ![image](https://user-images.githubusercontent.com/820411/145786706-3ecd0ef3-7e1b-47cf-a965-f717775f2521.png)
 
+### Ip Detection section
+- Enabled : Enable this extension
+- Api Service : Maxmind or IP Stack
+- Debug Enabled: Enable debug
+
+### Maxmind Configuration
+- Licence Key: Licence Key
+- Technical Solution
 
 ## Code Standard
 
