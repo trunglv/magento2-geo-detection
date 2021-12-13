@@ -1,0 +1,63 @@
+<?php  if($block->isEnabled()): ?>
+    <?php 
+        $geoInfo = $block->getGeoInfo();
+        
+    ?>
+    <style>
+        .geo-info-debug{
+            position: fixed;
+            width: 100%;
+            background: #f7f6f5;
+            border: 1px solid #ccc;
+            left: 0;
+            bottom: 0;
+            text-align: center;
+            
+        }
+        .geo-info-debug table{
+            width: auto;
+            border: 1px solid #ccc;
+            margin: auto;
+        }
+        .geo-info-debug table td{
+            background: #fff;
+            border: 1px solid #ccc;
+            
+        }
+        .geo-info-debug table td.label{
+            background: #ccc;
+        }
+    </style>
+    <div class="geo-info-debug" id="geo-info-debug-panel">
+        <div style="position: relative;"> 
+            <p style="font-size: 20px; color: orange" >Betagento -- IP Geography Detection Base On Vistor IP Address</p>
+            <a id="close-geo-info-debug" href="#" style="position:absolute; top:10px; right: 20px; font-weight: 700" > X Close</a>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="label"><?php echo __("Country Code");?></td>
+                        <td><?php echo isset($geoInfo['country_code']) ? $geoInfo['country_code'] : '';?></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><?php echo __("Zip Code");?></td>
+                        <td><?php echo isset($geoInfo['zip_code']) ? $geoInfo['zip_code'] : '';?></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label"><?php echo __("Executed Time");?></td>
+                        <td><?php echo isset($geoInfo['executed_time']) ? $geoInfo['executed_time'] : '';?></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        document.getElementById("close-geo-info-debug").addEventListener('click',function(event){
+            document.getElementById("geo-info-debug-panel").style.display = "none";
+            return false;
+        });
+
+    </script>
+    
+<?php endif;?>

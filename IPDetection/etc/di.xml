@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- Define preference implementation for GeolocationServiceInterface -->
+    <preference for="Betagento\IPDetection\Api\GeolocationServiceInterface" type="Betagento\IPDetection\Service\GeolocationService" />
+    <type name="Betagento\IPDetection\Service\ProviderFactory">
+        <arguments>
+            <argument name="providers" xsi:type="array">
+                <item name="geoplugin" xsi:type="string">Betagento\IPDetection\Service\Provider\GeoPlugin</item>
+                <item name="ipstack" xsi:type="string">Betagento\IPDetection\Service\Provider\IpStack</item>
+                <item name="maxmind" xsi:type="string">Betagento\IPDetection\Service\Provider\Maxmind</item>
+            </argument>
+
+        </arguments>
+    </type>
+
+    <type name="Betagento\IPDetection\Router\JobPool">
+        <arguments>
+            <argument name="jobs" xsi:type="array">
+                <item name="redirect" xsi:type="object">Betagento\IPDetection\Router\Job\Redirect</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Betagento\IPDetection\Service\Provider\Maxmind\Solution\Factory">
+        <arguments>
+            <argument name="solutions" xsi:type="array">
+                <item name="maxmind_database" xsi:type="string">Betagento\IPDetection\Service\Provider\Maxmind\Solution\Db</item>
+                <item name="redis" xsi:type="string">Betagento\IPDetection\Service\Provider\Maxmind\Solution\Redis</item>
+                <!--<item name="elasticsearch" xsi:type="string">Elasticsearch Plugin</item>-->
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="betagento:ipdetection:maxmind_download" xsi:type="object">Betagento\IPDetection\Console\Command\MaxmindDownload</item>
+                <item name="betagento:ipdetection:test" xsi:type="object">Betagento\IPDetection\Console\Command\Test</item>
+
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Framework\App\FrontController">
+        <plugin name="Betagento_IPDetection_requestPreprocessor" type="Betagento\IPDetection\App\FrontController\Plugin\RequestPreprocessor" sortOrder="49" />
+    </type>
+
+
+    <type name="Betagento\IPDetection\Model\Maxmind\Download\Jobs">
+        <arguments>
+            <argument name="jobs" xsi:type="array">
+                <item name="download_maxmind_db" xsi:type="object">Betagento\IPDetection\Model\Maxmind\Download\Database</item>
+            </argument>
+
+        </arguments>
+    </type>
+
+</config>

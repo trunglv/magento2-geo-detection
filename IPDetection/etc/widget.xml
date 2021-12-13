@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="betagento_ipdetection_widget_landing" class="Betagento\IPDetection\Block\Landing" is_email_compatible="true"
+             ttl="0">
+                <label>Landing Page -- Country Selector</label>
+                <description></description>
+                <parameters>
+                </parameters>
+    </widget>
+
+</widgets>

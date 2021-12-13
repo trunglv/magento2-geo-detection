@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/system_file.xsd">
+    <system>
+        <tab id="betagento" translate="label" sortOrder="10">
+            <label>Betagento</label>
+        </tab>
+        <section id="betagento_ipdetection" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <tab>betagento</tab>
+            <label>IP Detection</label>
+            <resource>Betagento_OrderNumber::betagento_ipdetection</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>
+                    <![CDATA[IP Detection]]>
+                </label>
+
+                <field id="enabled" translate="label" sortOrder="0" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>
+                        <![CDATA[Enabled]]>
+                    </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="geo_service" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>API Services</label>
+                    <source_model>Betagento\IPDetection\Model\Source\GeoServices</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+
+                <field id="debug_message" translate="label" sortOrder="20" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>
+                        <![CDATA[Enabled]]>
+                    </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+            </group>
+
+            <group id="redirect" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+
+                <label>
+                    <![CDATA[General Redirect]]>
+                </label>
+
+                <field id="enabled" translate="label" sortOrder="0" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>
+                        <![CDATA[Enabled]]>
+                    </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="country_for_website" translate="label" type="select" sortOrder="1" showInDefault="0" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Default Country</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+
+                <field id="default_store" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>SEO (Products,CMS Pages) Store View</label>
+                    <source_model>Magento\Config\Model\Config\Source\Store</source_model>
+                    <depends>
+                        <field id="Enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+
+            <group id="maxmind" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>
+                    <![CDATA[ Maxmind Configuration]]>
+                </label>
+
+                <field id="private_key" translate="label" sortOrder="0" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>
+                        <![CDATA[Private Key]]>
+                    </label>
+                </field>
+
+                <field id="technical_solution" translate="label" sortOrder="0" type="select" showInDefault="1" showInWebsite="1"
+                       showInStore="0" >
+                    <label><![CDATA[Technical Solution]]></label>
+                    <source_model>Betagento\IPDetection\Model\Source\Maxmind\Solutions</source_model>
+                </field>
+                
+            </group>
+
+            <group id="ipstack" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>
+                    <![CDATA[IP Stack]]>
+                </label>
+
+                <field id="private_key" translate="label" sortOrder="0" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>
+                        <![CDATA[Private Key]]>
+                    </label>
+                </field>
+
+            </group>
+
+        </section>
+    </system>
+</config>

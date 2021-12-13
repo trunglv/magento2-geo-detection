@@ -1,0 +1,22 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    
+    <type name="Betagento\IPDetection\Model\Source\GeoServices">
+        <arguments>
+            <argument name="services" xsi:type="array">
+                <item name="maxmind" xsi:type="string">MaxMind</item>
+                <item name="ipstack" xsi:type="string">IPStack</item>
+                <item name="geoplugin" xsi:type="string">GeoPlugin</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Betagento\IPDetection\Model\Source\Maxmind\Solutions">
+        <arguments>
+            <argument name="solutions" xsi:type="array">
+                <item name="maxmind_database" xsi:type="string">MaxMind Database</item>
+                <item name="redis" xsi:type="string">Redis</item>     
+            </argument>
+        </arguments>
+    </type>
+    
+</config>
