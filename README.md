@@ -4,7 +4,9 @@
 Magento2 Online Store can use this extension to detect a country from a visitor IP via other online services like MindMax or IpStack.
 
 ## Installation:
-
+```
+composer require betagento/magento2-geoip-detection:dev-main
+```
 ## How to use it:
 Go to Store >> Configuration >> Betagento >> IP Detection:
 ### GEO Detection Section
