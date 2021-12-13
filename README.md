@@ -10,7 +10,7 @@ composer require betagento/magento2-geoip-detection:dev-main
 `This package is not installable via Composer 1.x, please make sure you upgrade to Composer 2+. Read more about our Composer 1.x deprecation policy.`
 
 ## How to use it:
-***Go to Store >> Configuration >> Betagento >> IP Detection:*** 
+***Go to Store >> Configuration >> Betagento >> GEOIP Detection:*** 
 ### GEO Detection Section
 ![image](https://user-images.githubusercontent.com/820411/145790027-e8285353-71ff-4580-8808-238fd444a43b.png)
 
