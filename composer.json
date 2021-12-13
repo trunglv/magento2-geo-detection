@@ -1,0 +1,36 @@
+{
+    "name": "betagento/magento2-geo-detection",
+    "description": "Magento2 Extension - GEO Detection from Visitor IP",
+    "type": "magento2-module",
+    "require": {
+        "php": ">=7.0"
+    },
+    "version": "1.0.0",
+    "autoload": {
+        "files": [
+            "IPDetection/registration.php"
+        ],
+        "psr-4": {
+            "Betagento\\": ""
+        }
+    },
+    "autoload-dev": {
+        "files": [
+            "IPDetection/registration.php"
+        ],
+        "psr-4": {
+            "Betagento\\": ""
+        }
+    },
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "Luu Van Trung@ Betagento",
+            "email": "luuvantrung@gmail.com",
+            "role": "person"
+        }
+    ]
+}
