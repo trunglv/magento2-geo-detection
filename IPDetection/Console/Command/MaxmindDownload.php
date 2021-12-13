@@ -35,7 +35,7 @@ class MaxmindDownload extends Command
      */
     protected function configure()
     {
-        $this->setName('betagento:ipdetection:maxmind_download');
+        $this->setName('betagento:geoip_detection:maxmind_download');
         $this->setDescription('Maxmind Download Solution');
         parent::configure();
     }
