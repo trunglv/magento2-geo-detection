@@ -4,13 +4,15 @@
         <tab id="betagento" translate="label" sortOrder="10">
             <label>Betagento</label>
         </tab>
+
         <section id="betagento_ipdetection" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
             <tab>betagento</tab>
-            <label>IP Detection</label>
+            <label>GEO Detection</label>
             <resource>Betagento_OrderNumber::betagento_ipdetection</resource>
+            
             <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>
-                    <![CDATA[IP Detection]]>
+                    <![CDATA[Geo Detection]]>
                 </label>
 
                 <field id="enabled" translate="label" sortOrder="0" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
@@ -21,7 +23,7 @@
                 </field>
 
                 <field id="geo_service" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>API Services</label>
+                    <label>API Service</label>
                     <source_model>Betagento\IPDetection\Model\Source\GeoServices</source_model>
                     <depends>
                         <field id="enabled">1</field>
@@ -30,17 +32,49 @@
 
                 <field id="debug_message" translate="label" sortOrder="20" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
                     <label>
-                        <![CDATA[Enabled]]>
+                        <![CDATA[Debug Message Enabled]]>
                     </label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
 
             </group>
 
+           
+            <group id="maxmind" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>
+                    <![CDATA[ Maxmind Configuration]]>
+                </label>
+
+                <field id="private_key" translate="label" sortOrder="0" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>
+                        <![CDATA[Licence Key]]>
+                    </label>
+                </field>
+
+                <field id="technical_solution" translate="label" sortOrder="0" type="select" showInDefault="1" showInWebsite="1"
+                       showInStore="0" >
+                    <label><![CDATA[Technical Solution]]></label>
+                    <source_model>Betagento\IPDetection\Model\Source\Maxmind\Solutions</source_model>
+                </field>
+
+            </group>
+
+            <group id="ipstack" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>
+                    <![CDATA[IP Stack]]>
+                </label>
+
+                <field id="private_key" translate="label" sortOrder="0" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>
+                        <![CDATA[Private Key]]>
+                    </label>
+                </field>
+            </group>
+
             <group id="redirect" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
 
                 <label>
-                    <![CDATA[General Redirect]]>
+                    <![CDATA[Automatically Store Switch]]>
                 </label>
 
                 <field id="enabled" translate="label" sortOrder="0" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
@@ -65,38 +99,6 @@
                         <field id="Enabled">1</field>
                     </depends>
                 </field>
-            </group>
-
-            <group id="maxmind" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>
-                    <![CDATA[ Maxmind Configuration]]>
-                </label>
-
-                <field id="private_key" translate="label" sortOrder="0" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>
-                        <![CDATA[Private Key]]>
-                    </label>
-                </field>
-
-                <field id="technical_solution" translate="label" sortOrder="0" type="select" showInDefault="1" showInWebsite="1"
-                       showInStore="0" >
-                    <label><![CDATA[Technical Solution]]></label>
-                    <source_model>Betagento\IPDetection\Model\Source\Maxmind\Solutions</source_model>
-                </field>
-                
-            </group>
-
-            <group id="ipstack" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>
-                    <![CDATA[IP Stack]]>
-                </label>
-
-                <field id="private_key" translate="label" sortOrder="0" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>
-                        <![CDATA[Private Key]]>
-                    </label>
-                </field>
-
             </group>
 
         </section>
