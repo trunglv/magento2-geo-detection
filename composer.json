@@ -1,5 +1,5 @@
 {
-    "name": "betagento/magento2-geo-detection",
+    "name": "betagento/magento2-geoip-detection",
     "description": "Magento2 Extension - GEO Detection from Visitor IP",
     "type": "magento2-module",
     "require": {
