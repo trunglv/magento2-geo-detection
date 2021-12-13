@@ -35,7 +35,7 @@ class Test extends Command
      */
     protected function configure()
     {
-        $this->setName('betagento:ipdetection:test');
+        $this->setName('betagento:geoip_detection:test');
         $this->setDescription('Maxmind Download Solution');
 
         $this->addOption(
