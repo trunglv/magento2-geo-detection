@@ -9,6 +9,14 @@ composer require betagento/magento2-geoip-detection:dev-main
 ```
 `This package is not installable via Composer 1.x, please make sure you upgrade to Composer 2+. Read more about our Composer 1.x deprecation policy.`
 
+### To use MaxMind GeoIp
+```
+composer require require geoip2/geoip2:~2.0
+```
+```
+composer require tronovav/geoip2-update
+```
+
 ## How to use it:
 ***Go to Store >> Configuration >> Betagento >> GEOIP Detection:*** 
 ### GEO Detection Section
