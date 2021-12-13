@@ -1,4 +1,4 @@
-# Magento2 Extension - GEOIP Detection From Visitor IP
+# Magento2 Extension - GEO Detection From Visitor IP
 
 ## Overview
 Magento2 Online Store can use this extension to detect a country from a visitor IP via other online services like MindMax, Íptack and be extendable for other GeoIp services.
